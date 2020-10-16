@@ -16,8 +16,8 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
     HomeComponent,
    // VentasComponent,
     InventarioComponent,
-    TicketComponent,
-    ReporteComponent,
+    //TicketComponent,
+    //ReporteComponent,
   ],
   imports: [
     BrowserModule,

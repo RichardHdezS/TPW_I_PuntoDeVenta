@@ -7,6 +7,8 @@ const routes: Routes = [
   { path: 'clientes', loadChildren: () => import('./pages/clientes/clientes.module').then(m => m.ClientesModule) },
   { path: 'productos', loadChildren: () => import('./pages/productos/productos.module').then(m => m.ProductosModule) },
   { path: 'ventas', loadChildren: () => import('./pages/ventas/ventas.module').then(m => m.VentasModule) },
+  { path: 'ticket', loadChildren: () => import('./pages/ticket/ticket.module').then(m => m.TicketModule) },
+  { path: 'reporte', loadChildren: () => import('./pages/reporte/reporte.module').then(m => m.ReporteModule) },
   { path: '**', redirectTo:''},
 ];
 
