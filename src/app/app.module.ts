@@ -14,7 +14,7 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
   declarations: [
     AppComponent,
     HomeComponent,
-    VentasComponent,
+   // VentasComponent,
     InventarioComponent,
     TicketComponent,
     ReporteComponent,
