@@ -1,0 +1,26 @@
+<div>
+    <h1>Lista de productos</h1>
+    <button class="btn btn-primary"  routerLink="register">Agregar</button>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Clave</th>
+                <th scope="col">Descripcion</th>
+                <th scope="col">Clasificación</th>
+                <th scope="col">Stock</th>
+                <th scope="col">Costo</th>
+                <th scope="col">Precio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let prod of productos">
+                <th scope="row">{{ prod.clave }}</th>
+                <td>{{ prod.descripcion }}</td>
+                <td>{{ prod.clasificacion }}</td>
+                <td>{{ prod.stock }}</td>
+                <td>{{ prod.costo }}</td>
+                <td>{{ prod.precio }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

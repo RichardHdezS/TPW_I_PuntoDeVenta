@@ -1,0 +1,54 @@
+<section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <h1 class="display-4 py-2 text-truncate">Registrar Clientes</h1>
+                    <div class="px-2">
+                        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="justify-content-center">
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="clave" class="form-control" placeholder="Clave" type="text" [(ngModel)]="producto.clave" >
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                                </div>
+                                <input name="nombre" class="form-control" placeholder="Nombre" type="text" [(ngModel)]="producto.descripcion">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                </div>
+                                <input name="direccion" class="form-control" placeholder="Dirección" type="text" [(ngModel)]="producto.clasificacion">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+                                <input name="telefono" class="form-control" placeholder="telefono" type="text" [(ngModel)]="producto.stock">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+                                <input name="telefono" class="form-control" placeholder="telefono" type="text" [(ngModel)]="producto.costo">
+                            </div> <!-- form-group// -->
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+                                </div>
+                                <input name="telefono" class="form-control" placeholder="telefono" type="text" [(ngModel)]="producto.precio">
+                            </div> <!-- form-group// -->
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">Registrar</button>
+                            </div> <!-- form-group// -->      
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
