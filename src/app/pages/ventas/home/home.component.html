@@ -1,1 +1,24 @@
-<h1>Ventas home works!!</h1>
+<div>
+    <h1>Lista de ventas</h1>
+    <button class="btn btn-primary" routerLink="vregister">Agregar venta</button>
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Folio</th>
+                <th scope="col">Estatus</th>
+                <th scope="col">Fecha</th>
+                <th scope="col">Cliente</th>
+                <th scope="col">Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let v of ventas">
+                <th scope="row">{{ v.folio }}</th>
+                <td>{{ v.estatus }}</td>
+                <td>{{ v.fecha }}</td>
+                <td>{{ v.cliente }}</td>
+                <td>{{ v.detalle }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Cliente, Producto } from '../models/schemadb';
+import { Cliente, Producto, Venta } from '../models/schemadb';
 
 @Injectable({
   providedIn: 'root'
@@ -39,7 +39,7 @@ export class DbService {
     var db =  JSON.parse(retrievedObject);
     db.productos.push(producto);
     localStorage.setItem('database', JSON.stringify(db));
-  }  
-
+  }
+  
 
 }

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "punto-de-venta"
+    }
+  },
+  "defaultProject": "punto-de-venta",
+  "cli": {
+    "analytics": "e98953b5-38f8-438e-825f-e036ad778cff"
+  }
 }
