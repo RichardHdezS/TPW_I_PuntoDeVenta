@@ -1,9 +1,9 @@
 <section id="cover" class="min-vh-100">
     <div id="cover-caption">
         <div class="container">
-            <div class="row text-white">
+            <div class="row text-black">
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
-                    <h1 class="display-4 py-2 text-truncate">Registrar Ventas</h1>
+                    <h1 class="display-4 py-3 text-truncate">Registrar Ventas</h1>
                     <div class="px-2">
                         <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="justify-content-center">
                             <div class="form-group input-group">
@@ -16,7 +16,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input name="fecha" class="form-control" placeholder="Fecha" type="text" [(ngModel)]="venta.fecha">
+                                <input name="fecha" class="form-control" placeholder="Fecha" type="date" [(ngModel)]="venta.fecha">
                             </div> <!-- form-group// -->
                             
                             <div>
@@ -30,6 +30,40 @@
                                     </option>
                                 </select>
                             </div>
+                            <br>
+
+                            <!--DETALLE VENTAS-->
+                            
+                            <div>
+                                <div class="form-group input-group">
+                                    <span> <i class="fa fa-phone"></i></span>
+                                </div>
+                                <select name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="detalle.producto">
+                                    <option *ngFor="let cli of cliente" 
+                                    [value]= "cli.clave"> 
+                                    {{ cli.nombre }}
+                                    </option>
+                                </select>
+                            </div>
+                            <br>
+                            
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                </div>
+                                <input name="cantidad" class="form-control" placeholder="Cantidad" type="number" [(ngModel)]="detalle.cantidad">
+                            </div> <!-- form-group// -->
+
+                            <div class="form-group input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                </div>
+                                <input name="Descripción" class="form-control" placeholder="Descripcion" type="text" [(ngModel)]="detalle.cantidad">
+                            </div> <!-- form-group// -->
+
+
+
+
                             
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Registrar Venta</button>
