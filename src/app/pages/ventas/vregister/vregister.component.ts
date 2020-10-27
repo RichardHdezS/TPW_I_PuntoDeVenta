@@ -24,6 +24,7 @@ export class VregisterComponent implements OnInit {
     this.venta = new Venta ("","",0,0);
     this.detalle = new VentaDetalle (0,"",0,0);
     this.cliente = this.database.get_clientes();
+    console.log("Hola aqui estan los clientes -->" + this.cliente);
   }
 
   onSubmit(form){

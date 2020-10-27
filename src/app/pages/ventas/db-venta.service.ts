@@ -16,22 +16,22 @@ export class DbVentaService {
 
   get_ventas():Venta[]{
       let retrievedObject = localStorage.getItem('database');
-      console.log('get_ventas');
-      console.log(retrievedObject);
+      //console.log('get_ventas');
+      //console.log(retrievedObject);
       return JSON.parse(retrievedObject).ventas;
   }
 
   get_clientes():Cliente[]{
     let retrievedObject = localStorage.getItem('database');
-    console.log('get_clientes');
-    console.log(retrievedObject);
-    return JSON.parse(retrievedObject).Cliente;
+    //console.log('get_clientes');
+    //console.log(retrievedObject);
+    return JSON.parse(retrievedObject).clientes;
   }
 
   get_detalles():VentaDetalle[]{
     let retrievedObject = localStorage.getItem('database');
-    console.log('get_detalles');
-    console.log(retrievedObject);
+    //console.log('get_detalles');
+    //console.log(retrievedObject);
     return JSON.parse(retrievedObject).DVentas;
   }
 
