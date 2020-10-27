@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Cliente, Venta, VentaDetalle } from 'src/app/models/schemadb';
 import { DbVentaService } from 'src/app/pages/ventas/db-venta.service';
 
-@Component({
+@Component({ 
   selector: 'app-vregister',
   templateUrl: './vregister.component.html',
   styleUrls: ['./vregister.component.css']
