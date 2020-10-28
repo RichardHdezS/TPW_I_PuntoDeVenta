@@ -36,7 +36,6 @@ export class VregisterComponent implements OnInit {
     this.database.create_venta(this.venta);
     this.database.create_detalle(this.detalle);
     this.router.navigate(['ventas']);
-
   }
 
   onChange() {
