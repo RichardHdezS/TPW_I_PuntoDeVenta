@@ -23,9 +23,9 @@
                                 <div class="form-group input-group">
                                     <span> <i class="fa fa-phone"></i></span>
                                 </div>
-                                <select name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="cliente">
+                                <select name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="venta.cliente">
                                     <option *ngFor="let cli of cliente" 
-                                    [value]= "cli.clave"> 
+                                    [value]= "cli.nombre"> 
                                     {{ cli.nombre }}
                                     </option>
                                 </select>
@@ -38,10 +38,12 @@
                                 <div class="form-group input-group">
                                     <span> <i class="fa fa-phone"></i></span>
                                 </div>
-                                <select name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="detalle.producto">
-                                    <option *ngFor="let cli of cliente" 
-                                    [value]= "cli.clave"> 
-                                    {{ cli.nombre }}
+                                <select id="Producto" name="Producto" class="form-control"
+                                placeholder="Producto" [(ngModel)]="detalle.producto" id="Productos"
+                                onchange="cambioOpciones()">
+                                    <option *ngFor="let pro of producto" 
+                                    [value]= "pro.clave"> 
+                                    {{ pro.descripcion }}
                                     </option>
                                 </select>
                             </div>
@@ -58,7 +60,9 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input name="Descripción" class="form-control" placeholder="Descripcion" type="text" [(ngModel)]="detalle.cantidad">
+                                <input name="Descripcion" class="form-control" placeholder="Descripcion" type="text"
+                                [(ngModel)]="detalle.descripcion"> 
+
                             </div> <!-- form-group// -->
 
 

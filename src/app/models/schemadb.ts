@@ -55,6 +55,7 @@ export class VentaDetalle {
 	
 	constructor(
 		public producto: number,
+		public descripcion: string,
 		public cantidad: string,
 		public precio: number,
 		public importe: number,

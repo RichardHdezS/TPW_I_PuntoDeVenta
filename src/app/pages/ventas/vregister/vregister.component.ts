@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Cliente, Venta, VentaDetalle } from 'src/app/models/schemadb';
+import { Cliente, Venta, VentaDetalle, Producto } from 'src/app/models/schemadb';
 import { DbVentaService } from 'src/app/pages/ventas/db-venta.service';
 
 @Component({ 
@@ -13,6 +13,7 @@ export class VregisterComponent implements OnInit {
   venta:Venta;
   cliente:Cliente[];
   detalle:VentaDetalle;
+  producto:Producto[];
 
 
   constructor(
@@ -22,10 +23,13 @@ export class VregisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.venta = new Venta ("","",0,0);
-    this.detalle = new VentaDetalle (0,"",0,0);
+    this.detalle = new VentaDetalle (0,"","",0,0);
     this.cliente = this.database.get_clientes();
+    this.producto = this.database.get_productos();
     console.log("Hola aqui estan los clientes -->" + this.cliente);
+
   }
+
 
   onSubmit(form){
     this.database.create_venta(this.venta);
@@ -33,4 +37,16 @@ export class VregisterComponent implements OnInit {
     this.router.navigate(['ventas']);
   }
 
+
+  cambioOpciones(): void {
+    let Buscar = document.getElementById('Productos').nodeValue;
+    let contador;
+    
+    for(let i: number = 0; i<this.cliente.length; i++){
+      if(Buscar === (this.producto[i].clave)){
+        contador = i;
+      }
+    }
+    let descripcion = this.producto[contador].descripcion;
+  }
 }

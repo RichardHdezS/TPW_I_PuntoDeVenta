@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Venta } from 'src/app/models/schemadb';
 import { VentaDetalle } from 'src/app/models/schemadb';
 import { Cliente } from 'src/app/models/schemadb';
+import { Producto } from 'src/app/models/schemadb';
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,13 @@ export class DbVentaService {
     //console.log('get_clientes');
     //console.log(retrievedObject);
     return JSON.parse(retrievedObject).clientes;
+  }
+
+  get_productos():Producto[]{
+    let retrievedObject = localStorage.getItem('database');
+    //console.log('get_clientes');
+    //console.log(retrievedObject);
+    return JSON.parse(retrievedObject).productos;
   }
 
   get_detalles():VentaDetalle[]{
