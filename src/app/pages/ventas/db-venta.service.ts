@@ -46,7 +46,7 @@ export class DbVentaService {
   create_detalle(VentaDetalle){
     var retrievedObject = localStorage.getItem('database');
     var db = JSON.parse(retrievedObject);
-    db.ventas.push(VentaDetalle);
+    db.detVenta.push(VentaDetalle);
     localStorage.setItem('database', JSON.stringify(db));
   }
 

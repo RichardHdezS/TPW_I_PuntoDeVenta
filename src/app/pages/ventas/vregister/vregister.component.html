@@ -10,20 +10,20 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                 </div>
-                                <input id="folio" name="folio" class="form-control" placeholder="Folio" type="text" [(ngModel)]="venta.folio" >
+                                <input id="folio" name="folio" class="form-control" placeholder="Folio" type="text" [(ngModel)]="Vfolio" >
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input name="fecha" class="form-control" placeholder="Fecha" type="date" [(ngModel)]="venta.fecha">
+                                <input id="fecha" name="fecha" class="form-control" placeholder="Fecha" type="date" [(ngModel)]="Vfecha">
                             </div> <!-- form-group// -->
   
                             <div>
                                 <div class="form-group input-group">
                                     <span> <i class="fa fa-phone"></i></span>
                                 </div>
-                                <select name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="venta.cliente">
+                                <select id="cliente" name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="Vcliente">
                                     <option *ngFor="let cli of cliente"
                                     [value]= "cli.nombre">
                                     {{ cli.nombre }}
@@ -69,7 +69,7 @@
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
                                 <input id="price" name="Importe" class="form-control" placeholder="Importe" type="height"
-                                [(ngModel)]="venta.importe">
+                                [(ngModel)]="Vimport">
                             </div> <!-- form-group// -->
   
                             <div class="form-group">
