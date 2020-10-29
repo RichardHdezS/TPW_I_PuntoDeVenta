@@ -4,11 +4,11 @@ import { Producto } from 'src/app/models/schemadb';
 import { DbService } from 'src/app/services/db.service';
 
 @Component({
-  selector: 'app-register',
-  templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  selector: 'app-modificar',
+  templateUrl: './modificar.component.html',
+  styleUrls: ['./modificar.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class ModificarComponent implements OnInit {
   producto:Producto;
 
   constructor(
@@ -17,12 +17,10 @@ export class RegisterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.producto = new Producto("","","",0,0,0);
-    console.log("onInit register ");
   }
-
-	onSubmit(form){
-    this.database.create_producto(this.producto);
+  onSubmit(form){
+    this.database.show_form(this.producto.clave);
+    this.database.show_form(this.producto);
     this.router.navigate(['/productos']);
-	}
+}
 }

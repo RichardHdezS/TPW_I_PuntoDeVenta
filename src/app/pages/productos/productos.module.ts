@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
-  declarations: [ProductosComponent, RegisterComponent, HomeComponent],
+  declarations: [ProductosComponent, RegisterComponent, HomeComponent ],
   imports: [
     CommonModule,
     ProductosRoutingModule,

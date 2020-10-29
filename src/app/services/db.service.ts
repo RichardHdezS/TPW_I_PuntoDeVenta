@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { Cliente, Producto } from '../models/schemadb';
 
 @Injectable({
@@ -6,6 +7,7 @@ import { Cliente, Producto } from '../models/schemadb';
 })
 
 export class DbService {
+  producto:Producto;
 
   
   constructor() {
@@ -41,5 +43,36 @@ export class DbService {
     localStorage.setItem('database', JSON.stringify(db));
   }  
 
+  delete_producto(producto:Producto){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+    for(let prod of db.productos){
+      if(prod.clave == producto.clave){
+        const index = db.productos.indexOf(prod,0);
+        if(index > -1){
+          db.productos.splice(index,1);
+        }
+      }
+
+    }
+    localStorage.setItem('database', JSON.stringify(db));
+  }
+
+  show_form(producto){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+
+   // let clave = document.getElementById('clave');
+   // let desc = document.getElementById('desc');
+   // let clasif = document.getElementById('clasif');
+   // let stock = document.getElementById('stock');
+   // let costo = document.getElementById('costo');
+   // let precio = document.getElementById('precio');
+
+    
+
+
+    //localStorage.setItem('database', JSON.stringify(db));
+  }
 
 }

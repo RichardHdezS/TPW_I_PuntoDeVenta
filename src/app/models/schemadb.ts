@@ -26,7 +26,7 @@ export class Producto {
 	constructor(
 		public clave: string,
 		public descripcion: string,
-		public clasificacion: number,
+		public clasificacion: string,
 		public stock: number,
 		public costo: number,
 		public precio: number,

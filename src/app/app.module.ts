@@ -1,27 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { VentasComponent } from './pages/ventas/ventas.component';
-import { InventarioComponent } from './pages/inventario/inventario.component';
-import { TicketComponent } from './pages/ticket/ticket.component';
-import { ReporteComponent } from './pages/reporte/reporte.component';
+import { EliminarComponent } from './pages/productos/eliminar/eliminar.component';
+import { ModificarComponent } from './pages/productos/modificar/modificar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-   // VentasComponent,
-    InventarioComponent,
-    //TicketComponent,
-    //ReporteComponent,
+   EliminarComponent,
+   ModificarComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

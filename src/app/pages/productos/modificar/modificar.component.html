@@ -1,46 +1,46 @@
-<section id="cover" class="min-vh-100">
+<section id="cover" class="min-vh-100" >
     <div id="cover-caption">
         <div class="container">
             <div class="row text-white">
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
                     <h1 class="display-4 py-2 text-truncate">Registrar Clientes</h1>
                     <div class="px-2">
-                        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="justify-content-center">
+                        <form #ModForm="ngForm" (ngSubmit)="onSubmit(ModForm)" class="justify-content-center" >
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                 </div>
-                                <input name="clave" class="form-control" placeholder="Clave" type="text" [(ngModel)]="producto.clave" >
+                                <input name="clave" class="form-control" placeholder="Clave" type="text" [(ngModel)]="producto.clave" id="clave">
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                 </div>
-                                <input name="nombre" class="form-control" placeholder="Descripcion" type="text" [(ngModel)]="producto.descripcion">
+                                <input name="nombre" class="form-control" placeholder="Descripcion" type="text" [(ngModel)]="producto.descripcion" id="desc">
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input name="direccion" class="form-control" placeholder="Clasificacion" type="text" [(ngModel)]="producto.clasificacion">
+                                <input name="direccion" class="form-control" placeholder="Clasificacion" id="clasif" type="text" [(ngModel)]="producto.clasificacion">
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                 </div>
-                                <input name="telefono" class="form-control" placeholder="Stock" type="text" [(ngModel)]="producto.stock">
+                                <input name="telefono" class="form-control" placeholder="Stock" type="text" [(ngModel)]="producto.stock" id="stock">
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                 </div>
-                                <input name="telefono" class="form-control" placeholder="Costo" type="text" [(ngModel)]="producto.costo">
+                                <input name="telefono" class="form-control" placeholder="Costo" type="text" [(ngModel)]="producto.costo" id="costo">
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
                                 </div>
-                                <input name="telefono" class="form-control" placeholder="Precio" type="text" [(ngModel)]="producto.precio">
+                                <input name="telefono" class="form-control" placeholder="Precio" type="text" [(ngModel)]="producto.precio" id="precio">
                             </div> <!-- form-group// -->
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Registrar</button>
