@@ -11,7 +11,7 @@ import { DVentasComponent } from './dventas/dventas.component';
 
 
 @NgModule({
-  declarations: [VentasComponent, HomeComponent, VregisterComponent, DVentasComponent],
+  declarations: [VentasComponent, HomeComponent, VregisterComponent ,DVentasComponent],
   imports: [
     CommonModule,
     VentasRoutingModule,

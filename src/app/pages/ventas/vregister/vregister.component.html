@@ -10,7 +10,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
                                 </div>
-                                <input name="folio" class="form-control" placeholder="Folio" type="text" [(ngModel)]="venta.folio" >
+                                <input id="folio" name="folio" class="form-control" placeholder="Folio" type="text" [(ngModel)]="venta.folio" >
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
@@ -38,8 +38,9 @@
                                     <span> <i class="fa fa-phone"></i></span>
                                 </div>
                                 <select id="Producto" name="Producto" class="form-control"
-                                placeholder="Producto" [(ngModel)]="detalle.producto"
+                                placeholder="Producto" [(ngModel)]="dlleProducto"
                                 (change)="onChange()">
+                                    <option value="">Seleccione el producto</option>
                                     <option *ngFor="let pro of producto"
                                     [value]= "pro.clave">
                                     {{ pro.clave }}
@@ -52,7 +53,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input name="cantidad" class="form-control" placeholder="Cantidad" type="number" [(ngModel)]="detalle.cantidad">
+                                <input id="cantidad" name="cantidad" class="form-control" placeholder="Cantidad" type="number" [(ngModel)]="dlleCantidad">
                             </div> <!-- form-group// -->
   
                             <div class="form-group input-group">
@@ -60,21 +61,16 @@
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
                                 <input id="descripcion" name="Descripcion" class="form-control" placeholder="Descripcion" type="text"
-                                [(ngModel)]="detalle.descripcion">
+                                [(ngModel)]="dlleDescripcion">
   
                             </div> <!-- form-group// -->
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input id="price" name="Precio" class="form-control" placeholder="Precio" type="height"
-                                [(ngModel)]="detalle.precio">
-  
+                                <input id="price" name="Importe" class="form-control" placeholder="Importe" type="height"
+                                [(ngModel)]="venta.importe">
                             </div> <!-- form-group// -->
-  
-  
-  
-  
   
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">Registrar Venta</button>
