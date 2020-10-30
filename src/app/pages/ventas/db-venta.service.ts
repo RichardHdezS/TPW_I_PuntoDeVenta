@@ -40,7 +40,7 @@ export class DbVentaService {
     let retrievedObject = localStorage.getItem('database');
     //console.log('get_detalles');
     //console.log(retrievedObject);
-    return JSON.parse(retrievedObject).DVentas;
+    return JSON.parse(retrievedObject).detVenta;
   }
 
   create_detalle(VentaDetalle){

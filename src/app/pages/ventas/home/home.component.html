@@ -16,14 +16,26 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let v of ventas">
+            <tr *ngFor="let v of ventas; let i = index">
                 <th scope="row">{{ v.folio }}</th>
                 <td>Realizada</td>
                 <td>{{ v.fecha }}</td>
                 <td>{{ v.cliente }}</td>
                 <td>{{ v.importe }}</td>
-                <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td><button onclick="" type="button" class="btn btn-danger" (click)="delete_venta(v.folio)">Eliminar</button>
+                <td><button type="button" (click)="mostrar = !mostrar" class="btn btn-primary">Detalles</button></td>
+                <td *ngIf="mostrar">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Detalle de Venta</h5>
+                            <p>Producto: {{dllVentas[i].producto}}</p>
+                            <p>descripcion: {{dllVentas[i].descripcion}}</p>
+                            <p>Cantidad: {{dllVentas[i].cantidad}}</p>
+                            <p>Presio: {{dllVentas[i].precio}}</p>
+                            <p>Importe: {{dllVentas[i].importe}}</p>
+                        </div>
+                    </div>
+                </td>
+                <td><button type="button" class="btn btn-danger" (click)="delete_venta(v.folio)">Eliminar</button>
             </tr>
         </tbody>
     </table>

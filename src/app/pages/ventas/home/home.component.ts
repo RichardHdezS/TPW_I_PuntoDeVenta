@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Venta } from 'src/app/models/schemadb';
+import { Venta, VentaDetalle } from 'src/app/models/schemadb';
 import { DbVentaService } from 'src/app/pages/ventas/db-venta.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { DbVentaService } from 'src/app/pages/ventas/db-venta.service';
 export class HomeComponent implements OnInit {
   ventas : Venta[];
   vent : Venta;
-
+  dllVentas:VentaDetalle[];
+  mostrar=false;
 
   constructor(
     private router: Router,
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.ventas = this.database.get_ventas();
+    this.dllVentas=this.database.get_detalles();
   }
 
   delete_venta(vent){
