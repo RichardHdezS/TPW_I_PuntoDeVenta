@@ -57,5 +57,23 @@ export class DbVentaService {
     localStorage.setItem('database', JSON.stringify(db));
   }
   
+  delete_venta(venta:Venta){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+    for(let ven of db.ventas){
+      if(ven.clave == venta.folio){
+        const index = db.ventas.indexOf(ven,0);
+        if(index > -1){
+          db.ventas.splice(index,1);
+        }
+      }
 
+    }
+    localStorage.setItem('database', JSON.stringify(db));
+  }
+
+  show_form(producto){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+}
 }

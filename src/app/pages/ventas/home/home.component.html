@@ -23,7 +23,7 @@
                 <td>{{ v.cliente }}</td>
                 <td>{{ v.importe }}</td>
                 <td><button type="button" class="btn btn-primary">Detalles</button></td>
-                <td><button onclick="" type="button" class="btn btn-danger">Eliminar</button></td>
+                <td><button onclick="" type="button" class="btn btn-danger" (click)="delete_venta(v.folio)">Eliminar</button>
             </tr>
         </tbody>
     </table>
