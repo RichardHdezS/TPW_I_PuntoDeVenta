@@ -30,6 +30,7 @@ export class EliminarComponent implements OnInit {
     if(response){
       this.database.delete_producto(this.producto);
       this.router.navigate(['/productos']);
+      
     }
   }
 

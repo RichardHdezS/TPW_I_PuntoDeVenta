@@ -1,7 +1,6 @@
 <div>
     <h1>Lista de productos</h1>
     <button class="btn btn-primary"  routerLink="register">Agregar</button>
-    <button class="btn btn-primary"  routerLink="modificar">Modificar</button>
     <table class="table">
         <thead class="thead-light">
             <tr>
@@ -11,7 +10,6 @@
                 <th scope="col">Stock</th>
                 <th scope="col">Costo</th>
                 <th scope="col">Precio</th>
-                <th scope="col">Modificar</th>
                 <th scope="col"> Eliminar </th>
             </tr>
         </thead>
@@ -23,7 +21,6 @@
                 <td>{{ prod.stock }}</td>
                 <td>{{ prod.costo }}</td>
                 <td>{{ prod.precio }}</td>
-                <td> <button class="btn btn-info" (click)="show_form()">Modificar</button> </td>
                 <td> <button class="btn btn-danger" (click)="delete_producto(prod)">Eliminar</button> </td>
             </tr>
         </tbody>

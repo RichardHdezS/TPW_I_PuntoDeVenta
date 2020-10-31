@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Producto } from 'src/app/models/schemadb';
+import { Cliente } from 'src/app/models/schemadb';
 import { DbService } from 'src/app/services/db.service';
 
 @Component({
@@ -11,6 +12,7 @@ import { DbService } from 'src/app/services/db.service';
 export class HomeComponent implements OnInit {
   productos:Producto[];
   produc:Producto;
+  client:Cliente;
   
   
   constructor(
@@ -28,6 +30,6 @@ export class HomeComponent implements OnInit {
       this.router.navigate(['/productos']);
       location.reload();
     }
+  }
 
-}
 }

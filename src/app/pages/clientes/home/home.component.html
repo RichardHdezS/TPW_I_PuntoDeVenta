@@ -8,6 +8,7 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Direccion</th>
                 <th scope="col">Telefono</th>
+                <th scope="col">Eliminar</th>
             </tr>
         </thead>
         <tbody>
@@ -16,6 +17,7 @@
                 <td>{{ cli.nombre }}</td>
                 <td>{{ cli.direccion }}</td>
                 <td>{{ cli.telefono }}</td>
+                <td> <button class="btn btn-danger" (click)="delete_cliente(cli)">Eliminar</button> </td>
             </tr>
         </tbody>
     </table>

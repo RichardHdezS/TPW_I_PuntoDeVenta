@@ -58,6 +58,21 @@ export class DbService {
     localStorage.setItem('database', JSON.stringify(db));
   }
 
+  delete_cliente(cliente:Cliente){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+    for(let cli of db.clientes){
+      if(cli.clave == cliente.clave){
+        const index = db.clientes.indexOf(cli,0);
+        if(index > -1){
+          db.clientes.splice(index,1);
+        }
+      }
+
+    }
+    localStorage.setItem('database', JSON.stringify(db));
+  }
+
   show_form(producto){
     var retrievedObject = localStorage.getItem('database');
     var db = JSON.parse(retrievedObject);
