@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { Cliente, Producto } from '../models/schemadb';
+import { Cliente, Producto, Venta } from '../models/schemadb';
 
 @Injectable({
   providedIn: 'root'

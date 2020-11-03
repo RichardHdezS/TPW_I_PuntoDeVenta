@@ -46,7 +46,7 @@ export class Venta {
 	constructor(
 		public folio: string,
 		public fecha: string,
-		public cliente: number,
+		public cliente: string,
 		public importe: number,
 	){}
 }
@@ -55,6 +55,7 @@ export class VentaDetalle {
 	
 	constructor(
 		public producto: number,
+		public descripcion: string,
 		public cantidad: string,
 		public precio: number,
 		public importe: number,
