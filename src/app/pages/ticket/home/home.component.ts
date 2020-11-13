@@ -22,16 +22,16 @@ export class HomeComponent implements OnInit {
     this.detalle= this.database.get_detalles();
 
     let contador=this.venta.length-1;
-   
+   let contadorDetalle=this.detalle.length-1;
     
     var x = this.venta[contador].folio
     var y = this.venta[contador].cliente
     var z = this.venta[contador].fecha
     
-    var t = this.detalle[contador].descripcion
-    var u = this.detalle[contador].cantidad
-    var p = this.detalle[contador].precio
-    var i = this.detalle[contador].importe
+    var t = this.detalle[contadorDetalle].descripcion
+    var u = this.detalle[contadorDetalle].cantidad
+    var p = this.detalle[contadorDetalle].precio
+    var i = this.detalle[contadorDetalle].importe
 
     
     const pdf = new PdfMakeWrapper();

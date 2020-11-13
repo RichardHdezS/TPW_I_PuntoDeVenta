@@ -5,16 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { EliminarComponent } from './pages/productos/eliminar/eliminar.component';
-import { ModificarComponent } from './pages/productos/modificar/modificar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-   EliminarComponent,
-   ModificarComponent,
+  // EliminarComponent,
+  // ModificarComponent,
   ],
   imports: [
     BrowserModule,
