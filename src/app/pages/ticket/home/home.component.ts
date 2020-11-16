@@ -21,19 +21,23 @@ export class HomeComponent implements OnInit {
     this.venta= this.database.get_ventas(); 
     this.detalle= this.database.get_detalles();
 
-    let contador=this.venta.length-1;
-   let contadorDetalle=this.detalle.length-1;
-    
-    var x = this.venta[contador].folio
-    var y = this.venta[contador].cliente
-    var z = this.venta[contador].fecha
-    
-    var t = this.detalle[contadorDetalle].descripcion
-    var u = this.detalle[contadorDetalle].cantidad
-    var p = this.detalle[contadorDetalle].precio
-    var i = this.detalle[contadorDetalle].importe
+   
 
-    
+   
+  }
+  
+  generarPdf(){
+    let contador=this.venta.length-1;
+    let contadorDetalle=this.detalle.length-1;
+     
+     var x = this.venta[contador].folio
+     var y = this.venta[contador].cliente
+     var z = this.venta[contador].fecha
+     
+     var t = this.detalle[contadorDetalle].descripcion
+     var u = this.detalle[contadorDetalle].cantidad
+     var p = this.detalle[contadorDetalle].precio
+     var i = this.detalle[contadorDetalle].importe
     const pdf = new PdfMakeWrapper();
     pdf.add(new Txt('TIENDA').alignment('center').italics().bold().end);
     
@@ -75,6 +79,6 @@ export class HomeComponent implements OnInit {
   
    pdf.add(new Txt('¡GRACIAS POR SU COMPRA!').alignment('center').bold().end);
   pdf.create().open();
-  }
+}
 }
 

@@ -72,6 +72,9 @@ export class DbVentaService {
     localStorage.setItem('database', JSON.stringify(db));
   }
 
+
+
+
   show_form(producto){
     var retrievedObject = localStorage.getItem('database');
     var db = JSON.parse(retrievedObject);

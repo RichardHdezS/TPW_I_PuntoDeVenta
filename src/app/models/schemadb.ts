@@ -54,6 +54,7 @@ export class Venta {
 export class VentaDetalle {
 	
 	constructor(
+		
 		public producto: number,
 		public descripcion: string,
 		public cantidad: string,
