@@ -107,6 +107,7 @@ export class HomeComponent implements OnInit {
    pdf.add(pdf.ln(2));
   
    pdf.add(new Txt('¡GRACIAS POR SU COMPRA!').alignment('center').bold().end);
-  pdf.create().open();
+  // pdf.create().open();
+    pdf.create().print();
 }
 }
