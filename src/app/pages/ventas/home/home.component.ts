@@ -56,7 +56,7 @@ export class HomeComponent implements OnInit {
      var i = this.dllVentas[contador].importe
           } contador++;
     
-        }
+        } 
      
     const pdf = new PdfMakeWrapper();
     pdf.add(new Txt('TIENDA').alignment('center').italics().bold().end);
