@@ -76,12 +76,12 @@ export class DbVentaService {
     var retrievedObject = localStorage.getItem('database');
     var db = JSON.parse(retrievedObject);
     for(let ven of db.detVenta){
-      if(ven.producto == foli){
+      if(ven.Folio == foli){
         const index = db.detVenta.indexOf(ven,0);
-        if(index > -1){
-          alert("El detalle de la venta es: " + foli + " " + index);
+        if(index>-1)  {
           db.detVenta.splice(index,1);
         }
+        
       }
     }
     localStorage.setItem('database', JSON.stringify(db));

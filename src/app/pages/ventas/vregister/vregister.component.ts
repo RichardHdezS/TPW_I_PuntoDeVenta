@@ -76,7 +76,6 @@ export class VregisterComponent implements OnInit {
 
     //al enviar el formulario obtenemos
     let i=0;
-    alert(this.contadorProductos)
     while (i<this.contadorProductos) {
     this.dlleFolio=this.Vfolio;
     this.dlleProducto= this.productoSeleccionado[i];//obtenemos el folio

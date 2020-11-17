@@ -43,11 +43,13 @@ export class HomeComponent implements OnInit {
     let contador=0;
         var retrievedObject = localStorage.getItem('database');
         var db = JSON.parse(retrievedObject);
-        for(let ve of db.ventas){
-          if(ve.folio==fol.folio){
-            var x = this.ventas[contador].folio
-     var y = this.ventas[contador].cliente
-     var z = this.ventas[contador].fecha
+        for(contador=0; contador<this.dllVentas.length; contador++){
+          if(db.detVenta.Folio==fol.folio){
+            if(contador<this.ventas.length){
+              var x = this.ventas[contador].folio
+              var y = this.ventas[contador].cliente
+              var z = this.ventas[contador].fecha
+            }
      var t = this.dllVentas[contador].Folio
      var u = this.dllVentas[contador].cantidad
      var p = this.dllVentas[contador].precio
