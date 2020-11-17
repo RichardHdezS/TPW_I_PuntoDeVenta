@@ -4,8 +4,8 @@
             <div class="row text-black">
                 <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
                     <h1 class="display-4 py-3 text-truncate">Registrar Ventas</h1>
-                    <div class="px-2">
-                        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="justify-content-center">
+                    <div class="px-2"><!--TODO: implementar un select item que muestre los productos y podamos ir seleccionado cad uno de ellos-->
+                        <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)" class="justify-content-center" name="formul">
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-user"></i> </span>
@@ -16,7 +16,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input id="fecha" name="fecha" class="form-control" placeholder="Fecha" type="date" [(ngModel)]="Vfecha">
+                                <input id="fecha" name="fecha" class="form-control" disabled="disabled" [(ngModel)]="Vfecha">
                             </div> <!-- form-group// -->
   
                             <div>
@@ -24,6 +24,7 @@
                                     <span> <i class="fa fa-phone"></i></span>
                                 </div>
                                 <select id="cliente" name="Cliente" class="form-control" placeholder="Cliente" [(ngModel)]="Vcliente">
+                                    <option value="">Selecciona el cliente</option>
                                     <option *ngFor="let cli of cliente"
                                     [value]= "cli.nombre">
                                     {{ cli.nombre }}
@@ -40,10 +41,10 @@
                                 <select id="Producto" name="Producto" class="form-control"
                                 placeholder="Producto" [(ngModel)]="dlleProducto"
                                 (change)="onChange()">
-                                    <option value="">Seleccione el producto</option>
+                                <option value="">Selecciona el producto</option>
                                     <option *ngFor="let pro of producto"
                                     [value]= "pro.clave">
-                                    {{ pro.clave }}
+                                    {{ pro.descripcion }}
                                     </option>
                                 </select>
                             </div>
@@ -60,20 +61,25 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input id="descripcion" name="Descripcion" class="form-control" placeholder="Descripcion" type="text"
-                                [(ngModel)]="dlleDescripcion">
-  
+                                <input id="descripcion" name="Descripcion" class="form-control" disabled="disabled" placeholder="Descripcion" type="text"
+                                [(ngModel)]="dlleFolio">
                             </div> <!-- form-group// -->
+
                             <div class="form-group input-group">
                                 <div class="input-group-prepend">
                                     <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
                                 </div>
-                                <input id="price" name="Importe" class="form-control" placeholder="Importe" type="height"
-                                [(ngModel)]="Vimport">
+                                <input id="price" name="Importe" class="form-control" placeholder="Importe" disabled="disabled" type="height"
+                                [(ngModel)]="dlleImporte">
                             </div> <!-- form-group// -->
-  
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">Registrar Venta</button>
+
+                            <div class="form-group row justify-content-around">
+                                <div class="col">
+                                    <button type="button" (click)="agregarPro()" class="btn btn-primary ">Agregar al carrito</button>
+                                </div>
+                                <div class="col">
+                                     <button type="submit" class="btn btn-primary ">Registrar Venta</button>
+                                </div>
                             </div>
                         </form>
                         

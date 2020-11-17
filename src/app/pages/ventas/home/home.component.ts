@@ -29,14 +29,14 @@ export class HomeComponent implements OnInit {
   }
 
   delete_venta(vent){
-    const response = confirm('Are you sure you want to delete');
+    const response = confirm('Esta seguro de borrar la venta: ' + vent.folio);
     if(response){
       this.database.delete_venta(vent);
+      this.database.delete_DlleVenta(vent.folio);
       this.router.navigate(['/ventas']);
       location.reload();
     }
   }
-
 
   generarPdf(fol){
 
@@ -48,7 +48,7 @@ export class HomeComponent implements OnInit {
             var x = this.ventas[contador].folio
      var y = this.ventas[contador].cliente
      var z = this.ventas[contador].fecha
-     var t = this.dllVentas[contador].descripcion
+     var t = this.dllVentas[contador].Folio
      var u = this.dllVentas[contador].cantidad
      var p = this.dllVentas[contador].precio
      var i = this.dllVentas[contador].importe
@@ -56,17 +56,6 @@ export class HomeComponent implements OnInit {
     
         }
      
-   
-        // let contador=this.ventas.length-1;
-    
-    // let contadorDetalle=this.dllVentas.length-1;
-    
-    
-     
-    //  var t = this.dllVentas[contadorDetalle].descripcion
-    //  var u = this.dllVentas[contadorDetalle].cantidad
-    //  var p = this.dllVentas[contadorDetalle].precio
-    //  var i = this.dllVentas[contadorDetalle].importe
     const pdf = new PdfMakeWrapper();
     pdf.add(new Txt('TIENDA').alignment('center').italics().bold().end);
     

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { toInteger } from '@ng-bootstrap/ng-bootstrap/util/util';
 import { Venta } from 'src/app/models/schemadb';
 import { VentaDetalle } from 'src/app/models/schemadb';
 import { Cliente } from 'src/app/models/schemadb';
@@ -57,23 +58,34 @@ export class DbVentaService {
     localStorage.setItem('database', JSON.stringify(db));
   }
   
-  delete_venta(venta:Venta){
+  delete_venta(venta){
     var retrievedObject = localStorage.getItem('database');
     var db = JSON.parse(retrievedObject);
     for(let ven of db.ventas){
-      if(ven.clave == venta.folio){
+      if(ven.folio == venta.folio){
         const index = db.ventas.indexOf(ven,0);
         if(index > -1){
           db.ventas.splice(index,1);
         }
       }
-
     }
     localStorage.setItem('database', JSON.stringify(db));
   }
 
-
-
+  delete_DlleVenta(foli){
+    var retrievedObject = localStorage.getItem('database');
+    var db = JSON.parse(retrievedObject);
+    for(let ven of db.detVenta){
+      if(ven.producto == foli){
+        const index = db.detVenta.indexOf(ven,0);
+        if(index > -1){
+          alert("El detalle de la venta es: " + foli + " " + index);
+          db.detVenta.splice(index,1);
+        }
+      }
+    }
+    localStorage.setItem('database', JSON.stringify(db));
+  }
 
   show_form(producto){
     var retrievedObject = localStorage.getItem('database');

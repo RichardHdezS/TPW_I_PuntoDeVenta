@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
      var y = this.venta[contador].cliente
      var z = this.venta[contador].fecha
      
-     var t = this.detalle[contadorDetalle].descripcion
+     var t = this.detalle[contadorDetalle].Folio
      var u = this.detalle[contadorDetalle].cantidad
      var p = this.detalle[contadorDetalle].precio
      var i = this.detalle[contadorDetalle].importe

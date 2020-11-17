@@ -29,16 +29,16 @@
                         <div class="card-body">
                             <h5 class="card-title">Detalle de Venta</h5>
                             
-                            <p>Producto: {{dllVentas[i].producto}}</p>
-                            <p>descripcion: {{dllVentas[i].descripcion}}</p>
-                            <p>Cantidad: {{dllVentas[i].cantidad}}</p>
-                            <p>Precio: {{dllVentas[i].precio}}</p>
-                            <p>Importe: {{dllVentas[i].importe}}</p>
+                            <p>{{dllVentas[i].Folio}}</p>
+                            <p>{{dllVentas[i].producto}}</p>                           
+                            <p>{{dllVentas[i].cantidad}}</p>
+                            <p>{{dllVentas[i].precio}}</p>
+                            <p>{{dllVentas[i].importe}}</p>
                         </div>
                     </div>
                 </td>
                 <td><button type="button" class="btn btn-primary"  (click)="generarPdf(v)">Ticket</button>
-                <td><button type="button" class="btn btn-danger" (click)="delete_venta(v.folio)">Eliminar</button>
+                <td><button type="button" class="btn btn-danger" (click)="delete_venta(v)">Eliminar</button>
             </tr>
         </tbody>
     </table>

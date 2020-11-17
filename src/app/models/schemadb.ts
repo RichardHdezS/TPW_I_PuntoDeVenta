@@ -54,10 +54,9 @@ export class Venta {
 export class VentaDetalle {
 	
 	constructor(
-		
-		public producto: number,
-		public descripcion: string,
-		public cantidad: string,
+		public Folio: string,
+		public producto: string,
+		public cantidad: number,
 		public precio: number,
 		public importe: number,
 	){}
