@@ -29,13 +29,13 @@ export class VregisterComponent implements OnInit {
    productoSeleccionado:string[];
    productoCanditdad:number[];
    productoPrecioUni:number[];
-  preciosSeleccionados:number[];
+   preciosSeleccionados:number[];
   //productoDescripcion:string[];
    total:number;
 
    contador:number;
    contadorProductos:number;
-  constructor(
+    constructor(
     private router:Router,
     private database:DbVentaService
   ) { //incializamos las varibales para recoger datos del detalle venta
@@ -112,7 +112,7 @@ export class VregisterComponent implements OnInit {
 
 agregarPro(){
   let Buscar = document.getElementById("Producto")[this.contador+1].text;
-    this.productoSeleccionado.push(Buscar);//el producto seleccioando, lo metemes al array
+    this.productoSeleccionado.push(Buscar);//el producto seleccioando, lo metemes al array444
 
     let cant=parseInt((<HTMLInputElement>document.getElementById("cantidad")).value);//la cantidad vendida del producto
     this.productoCanditdad.push(cant)
